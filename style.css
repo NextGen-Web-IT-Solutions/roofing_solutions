@@ -61,11 +61,11 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px 0;
+    padding: 15px 0;
 }
 
 .logo img {
-    height: 60px; /* Adjust based on your logo size */
+    height: 60px;
     width: auto;
 }
 
@@ -106,7 +106,6 @@ ul {
 
 /* --- Hero Section --- */
 .hero {
-    /* Replace 'hero-bg.jpg' with the AI generated image */
     background-image: url('hero-bg.png'); 
     background-size: cover;
     background-position: center;
@@ -235,6 +234,34 @@ ul {
     font-size: 1.1rem;
 }
 
+/* --- Gallery Section --- */
+.gallery {
+    background-color: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
 /* --- Why Choose Us Section --- */
 .why-us {
     background-color: var(--navy);
@@ -269,27 +296,33 @@ ul {
     background-color: var(--light-bg);
 }
 
-.contact-info {
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contact-info-block {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 20px;
 }
 
 .contact-item {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 15px;
     background: var(--white);
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .contact-item i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--orange);
+    margin-top: 5px;
 }
 
 .contact-item h4 {
@@ -301,7 +334,6 @@ ul {
     display: block;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 1.1rem;
 }
 
 .contact-item a:hover {
@@ -310,33 +342,82 @@ ul {
 
 .contact-buttons {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 .btn-contact {
-    padding: 15px 30px;
+    padding: 12px 20px;
     border-radius: 8px;
     color: var(--white);
     font-weight: 600;
-    font-size: 1.1rem;
+    flex: 1;
+    text-align: center;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 8px;
     transition: transform 0.3s ease;
 }
 
 .btn-contact:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-.btn-wa {
-    background-color: #25D366;
+.btn-wa { background-color: #25D366; }
+.btn-fb { background-color: #1877F2; }
+
+/* --- Contact Form --- */
+.contact-form-block {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.btn-fb {
-    background-color: #1877F2;
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--orange);
+}
+
+/* --- Google Map --- */
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* --- Footer --- */
@@ -376,7 +457,7 @@ footer {
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hidden by default on mobile, JS will toggle */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -403,9 +484,11 @@ footer {
         flex-direction: column;
     }
 
-    .contact-item {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
         flex-direction: column;
-        text-align: center;
-        padding: 20px;
     }
 }

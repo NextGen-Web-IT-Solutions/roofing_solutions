@@ -23,12 +23,12 @@
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <!-- Replace 'logo.png' with the actual file name of your logo -->
                 <img src="logo.png" alt="Roofing Solutions Technologies Logo">
             </div>
             <nav class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#why-us">Why Choose Us</a>
                 <a href="#contact" class="btn-primary">Get a Free Quote</a>
             </nav>
@@ -94,6 +94,24 @@
         </div>
     </section>
 
+    <!-- Gallery Section (Visualization) -->
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Recent Work</h2>
+            <p class="section-subtitle">See the quality and precision we bring to every project.</p>
+            
+            <div class="gallery-grid">
+                <!-- Replace these with actual photos of your work -->
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1632759145351-1d5929193e0b?q=80&w=800&auto=format&fit=crop" alt="Roof Installation"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop" alt="Truss Fabrication"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" alt="Roof Repair"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Ceiling Installation"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="New Roof"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" alt="Roof Painting"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Us Section -->
     <section id="why-us" class="why-us section-padding">
         <div class="container">
@@ -124,27 +142,62 @@
     <section id="contact" class="contact section-padding">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Don't stress about your roof. Whether it's new roofs, repairs, or changing types, we are a call away.</p>
+            <p class="section-subtitle">Don't stress about your roof. We are a call away.</p>
             
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <h4>Call Us</h4>
-                        <a href="tel:+263779031596">+263 779 031 596</a><br>
-                        <a href="tel:+263784900064">+263 784 900 064</a>
+            <div class="contact-wrapper">
+                <!-- Contact Info & Buttons -->
+                <div class="contact-info-block">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <a href="tel:+263779031596">+263 779 031 596</a><br>
+                            <a href="tel:+263784900064">+263 784 900 064</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>River Of Life International - Jubilee Restoration Centre (JRC)<br>9 Josiah Chinamano Road, Bulawayo</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/263779031596" target="_blank" class="btn-contact btn-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.facebook.com/share/1DezRYojKU/" target="_blank" class="btn-contact btn-fb">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
                     </div>
                 </div>
-                
-                <div class="contact-buttons">
-                    <a href="https://wa.me/263779031596" target="_blank" class="btn-contact btn-wa">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Us
-                    </a>
-                    <!-- Replace the href below with your actual Facebook page URL -->
-                    <a href="https://www.facebook.com/" target="_blank" class="btn-contact btn-fb">
-                        <i class="fab fa-facebook-f"></i> Facebook
-                    </a>
+
+                <!-- Contact Form -->
+                <div class="contact-form-block">
+                    <!-- REPLACE 'YOUR_FORMSPREE_ID' WITH YOUR ACTUAL FORMSPREE URL -->
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
                 </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.484879488784!2d28.5723213!3d-20.1518344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfd9f2b2b2b2b2%3A0x2b2b2b2b2b2b2b2b!2s9%20Josiah%20Chinamano%20Rd%2C%20Bulawayo!5e0!3m2!1sen!2szw!4v1620000000000!5m2!1sen!2szw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
