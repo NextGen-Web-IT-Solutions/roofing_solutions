@@ -99,19 +99,17 @@ ul {
 
 .mobile-menu-btn {
     display: none;
-    background: transparent;
-    border: none;
-    padding: 0;
+    font-size: 24px;
+    color: var(--navy);
     cursor: pointer;
 }
 
 /* --- Hero Section --- */
 .hero {
     background-image: url('hero-bg.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: var(--navy);
     height: 85vh;
     display: flex;
     align-items: center;
@@ -485,49 +483,7 @@ footer {
     }
 
     .mobile-menu-btn {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        width: 44px;
-        height: 44px;
-        border-radius: 6px;
-        transition: background-color 0.25s ease;
-    }
-
-    .mobile-menu-btn:hover,
-    .mobile-menu-btn:focus-visible {
-        background-color: rgba(15, 44, 89, 0.08);
-    }
-
-    .mobile-menu-btn:focus-visible {
-        outline: 2px solid var(--orange);
-        outline-offset: 2px;
-    }
-
-    .hamburger-line {
         display: block;
-        width: 26px;
-        height: 3px;
-        border-radius: 3px;
-        background-color: var(--navy);
-        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
-    }
-
-    /* Morph into an X when the menu is open (state comes straight from aria-expanded) */
-    .mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-        background-color: var(--orange);
-    }
-
-    .mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-        background-color: var(--orange);
     }
 
     /* --- Hero Section Mobile Fixes --- */
